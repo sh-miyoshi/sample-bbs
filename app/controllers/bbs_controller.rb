@@ -3,5 +3,12 @@ class BbsController < ApplicationController
     @messages = Message.all
   end
 
-  def add; end
+  def add
+    Message.create(
+      text: params[:text],
+      userid: 0 # debug
+    )
+
+    redirect_to action: 'show'
+  end
 end
