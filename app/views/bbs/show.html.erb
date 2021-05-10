@@ -1,2 +1,6 @@
-<h1>Bbs#show</h1>
-<p>Find me in app/views/bbs/show.html.erb</p>
+<h1>BBS messages</h1>
+<div>
+  <% @messages.each do |msg| %>
+    <div> <%= msg.text %></div>
+  <% end %>
+</div>
